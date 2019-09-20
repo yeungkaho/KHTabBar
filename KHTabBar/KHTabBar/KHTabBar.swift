@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol KHTabBarDelegate: AnyObject {
+public protocol KHTabBarDelegate: AnyObject {
     func tabBar(didSelectItemAt index: Int)
 }
 
@@ -22,7 +22,7 @@ public struct KHTabBarItem {
 
 public class KHTabBar: UIView {
 
-    weak var delegate: KHTabBarDelegate?
+    public weak var delegate: KHTabBarDelegate?
     
     public private(set) var selectedIndex: Int = 0 {
         didSet {

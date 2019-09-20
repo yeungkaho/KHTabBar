@@ -22,7 +22,7 @@ class DemoViewController: UIViewController, KHTabBarDelegate {
             var images = [UIImage]()
             for i in 0 ... 11 {
                 //anim_tabs_gallery_new_
-                if let image = UIImage(named: String(format: "your_test_images1_%05d", i)) {
+                if let image = UIImage(named: String(format: "anim_tabs_home_%05d", i)) {
                     images.append(image)
                 }
             }
@@ -32,7 +32,7 @@ class DemoViewController: UIViewController, KHTabBarDelegate {
             var images = [UIImage]()
             for i in 0 ... 11 {
                 //anim_tabs_gallery_new_
-                if let image = UIImage(named: String(format: "your_test_images2_%05d", i)) {
+                if let image = UIImage(named: String(format: "anim_tabs_daily_new_%05d", i)) {
                     images.append(image)
                 }
             }
@@ -42,7 +42,7 @@ class DemoViewController: UIViewController, KHTabBarDelegate {
             var images = [UIImage]()
             for i in 0 ... 11 {
                 //anim_tabs_gallery_new_
-                if let image = UIImage(named: String(format: "your_test_images3_%05d", i)) {
+                if let image = UIImage(named: String(format: "anim_tabs_create_new_%05d", i)) {
                     images.append(image)
                 }
             }
@@ -52,7 +52,7 @@ class DemoViewController: UIViewController, KHTabBarDelegate {
             var images = [UIImage]()
             for i in 0 ... 11 {
                 //anim_tabs_gallery_new_
-                if let image = UIImage(named: String(format: "your_test_images4_%05d", i)) {
+                if let image = UIImage(named: String(format: "anim_tabs_gallery_new_%05d", i)) {
                     images.append(image)
                 }
             }
@@ -62,14 +62,14 @@ class DemoViewController: UIViewController, KHTabBarDelegate {
         tabBar.items = [
             KHTabBarItem(
                 images: images1,
-                title: "1",
+                title: "For You",
                 selectedIconSize: CGSize(width: 60, height: 54),
                 normalIconSize: CGSize(width: 45, height: 42),
                 selectedElevation: 2
             ),
             KHTabBarItem(
                 images: images2,
-                title: "2",
+                title: "Daily",
                 selectedIconSize: CGSize(width: 60, height: 54),
                 normalIconSize: CGSize(width: 45, height: 42),
                 selectedElevation: 2
@@ -77,7 +77,7 @@ class DemoViewController: UIViewController, KHTabBarDelegate {
             ,
             KHTabBarItem(
                 images: images3,
-                title: "3",
+                title: "Create",
                 selectedIconSize: CGSize(width: 60, height: 54),
                 normalIconSize: CGSize(width: 45, height: 42),
                 selectedElevation: 2
@@ -85,7 +85,7 @@ class DemoViewController: UIViewController, KHTabBarDelegate {
             ,
             KHTabBarItem(
                 images: images4,
-                title: "4",
+                title: "Gallery",
                 selectedIconSize: CGSize(width: 60, height: 54),
                 normalIconSize: CGSize(width: 45, height: 42),
                 selectedElevation: 2
