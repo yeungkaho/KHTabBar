@@ -13,11 +13,11 @@ public protocol KHTabBarDelegate: AnyObject {
 }
 
 public struct KHTabBarItem {
-    let images: [UIImage]
-    let title: String
-    let selectedIconSize: CGSize
-    let normalIconSize: CGSize
-    let selectedElevation: CGFloat
+    public let images: [UIImage]
+    public let title: String
+    public let selectedIconSize: CGSize
+    public let normalIconSize: CGSize
+    public let selectedElevation: CGFloat
 }
 
 public class KHTabBar: UIView {
