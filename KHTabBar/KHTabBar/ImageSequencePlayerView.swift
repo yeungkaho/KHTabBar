@@ -24,7 +24,13 @@ class KHTabIconImageSequenceView: UIView {
     
     var timer: Timer?
     
-    var frameRate: Double = 15
+    var frameRate: Double = 30 {
+        didSet {
+            if frameRate != oldValue {
+                setUpTimer()
+            }
+        }
+    }
     
     var duration: TimeInterval {
         return Double(images.count) / frameRate
@@ -39,6 +45,11 @@ class KHTabIconImageSequenceView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(imageView)
+        setUpTimer()
+    }
+    
+    func setUpTimer() {
+        timer?.invalidate()
         timer = Timer(timeInterval: 1 / frameRate, repeats: true, block: {
             [weak self] (_) in
             self?.update()

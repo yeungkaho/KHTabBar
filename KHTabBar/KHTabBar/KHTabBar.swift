@@ -37,7 +37,11 @@ public struct KHTabBarItem {
 
 public class KHTabBar: UIView {
 
-    public weak var delegate: KHTabBarDelegate?
+    public weak var delegate: KHTabBarDelegate? {
+        didSet {
+            notifyDelegate()
+        }
+    }
     
     public private(set) var selectedIndex: Int = 0 {
         didSet {
@@ -81,6 +85,14 @@ public class KHTabBar: UIView {
         didSet {
             for tab in tabs {
                 tab.iconBaseColor = iconBaseColor
+            }
+        }
+    }
+    
+    public var frameRate: Double = 30 {
+        didSet {
+            for tab in tabs {
+                tab.frameRate = frameRate
             }
         }
     }
@@ -197,7 +209,12 @@ public class KHTabView: UIView {
         label.textAlignment = .center
         return label
     }()
-    let framerate: Double = 12
+    
+    var frameRate: Double = 30 {
+        didSet {
+            imageView.frameRate = frameRate
+        }
+    }
     
     private let iconContainer: UIView = {
         let view = UIView()
@@ -278,10 +295,13 @@ public class KHTabView: UIView {
             return
         }
         
-        
-        UIView.animate(withDuration: imageView.duration, delay: 0, options: .curveEaseOut, animations: {
+
+        UIView.animate(withDuration: imageView.duration, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: [], animations: {
             self.layoutIcon()
         }, completion: nil)
+//        UIView.animate(withDuration: imageView.duration, delay: 0, options: ., animations: {
+//            self.layoutIcon()
+//        }, completion: nil)
     }
     
     @objc private func tapped() {
