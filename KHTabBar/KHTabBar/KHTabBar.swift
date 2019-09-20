@@ -18,6 +18,21 @@ public struct KHTabBarItem {
     public let selectedIconSize: CGSize
     public let normalIconSize: CGSize
     public let selectedElevation: CGFloat
+    
+    init(
+        images: [UIImage],
+        title: String,
+        selectedIconSize: CGSize = CGSize(width: 60, height: 54),
+        normalIconSize: CGSize = CGSize(width: 45, height: 42),
+        selectedElevation: CGFloat = 2
+        )
+    {
+        self.images = images
+        self.title = title
+        self.selectedIconSize = selectedIconSize
+        self.normalIconSize = normalIconSize
+        self.selectedElevation = selectedElevation
+    }
 }
 
 public class KHTabBar: UIView {
