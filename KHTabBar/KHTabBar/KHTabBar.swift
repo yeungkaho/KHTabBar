@@ -70,6 +70,14 @@ public class KHTabBar: UIView {
         }
     }
     
+    public func selectTab(at index:Int) -> Bool {
+        if tabs.indices.contains(index) {
+            selectedIndex = index
+            return true
+        }
+        return false
+    }
+    
     private var tabs = [KHTabView]()
     
     private func refreshTabs() {
