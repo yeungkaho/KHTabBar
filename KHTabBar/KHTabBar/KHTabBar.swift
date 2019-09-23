@@ -97,9 +97,12 @@ public class KHTabBar: UIView {
         }
     }
     
-    public func selectTab(at index:Int) -> Bool {
+    public func selectTab(at index:Int, notifyingDelegate: Bool = true) -> Bool {
         if tabs.indices.contains(index) {
             selectedIndex = index
+            if notifyingDelegate {
+                notifyDelegate()
+            }
             return true
         }
         return false

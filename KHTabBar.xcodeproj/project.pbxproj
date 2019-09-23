@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1106A8692338BC77009C4813 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1106A8682338BC77009C4813 /* .gitignore */; };
 		11761C0E2333AA5100CC1192 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11761C0D2333AA5100CC1192 /* AppDelegate.swift */; };
 		11761C152333AA5200CC1192 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11761C142333AA5200CC1192 /* Assets.xcassets */; };
 		11761C182333AA5200CC1192 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11761C162333AA5200CC1192 /* LaunchScreen.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1106A8682338BC77009C4813 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		11761C0A2333AA5100CC1192 /* KHTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KHTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11761C0D2333AA5100CC1192 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11761C142333AA5200CC1192 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				11761C2C2334B58300CC1192 /* KHTabBar.podspec */,
+				1106A8682338BC77009C4813 /* .gitignore */,
 				11761C0C2333AA5100CC1192 /* KHTabBar */,
 				11761C0B2333AA5100CC1192 /* Products */,
 			);
@@ -149,6 +152,7 @@
 				11761C182333AA5200CC1192 /* LaunchScreen.storyboard in Resources */,
 				11761C222333AA8E00CC1192 /* DemoViewController.xib in Resources */,
 				11761C2D2334B58400CC1192 /* KHTabBar.podspec in Resources */,
+				1106A8692338BC77009C4813 /* .gitignore in Resources */,
 				11761C152333AA5200CC1192 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
